@@ -50,8 +50,8 @@
         <ul class="mobile-menu-listing">
             <li class="active"><a href="/">ホーム</a></li>
             <li><a href="/article">インタビュー記事一覧</a></li>
-            <li><a href="/article">求人一覧</a></li>
-            <li><a href="/article">お問い合わせ</a></li>
+{{--            <li><a href="/article">求人一覧</a></li>--}}
+{{--            <li><a href="/article">お問い合わせ</a></li>--}}
         </ul>
     </div>
 </header>
@@ -70,8 +70,8 @@
             <ul class="menu-listing-desktop">
                 <li class="active"><a href="/">ホーム</a></li>
                 <li><a href="/article">インタビュー記事一覧</a></li>
-                <li><a href="/article">求人一覧</a></li>
-                <li><a href="/article">お問い合わせ</a></li>
+{{--                <li><a href="/article">求人一覧</a></li>--}}
+{{--                <li><a href="/article">お問い合わせ</a></li>--}}
             </ul>
         </div>
     </div>
@@ -85,8 +85,8 @@
             <ul class="footer-menu-listing-home">
                 <li><a href="/">ホーム</a></li>
                 <li><a href="/article">記事一覧</a></li>
-                <li><a href="/article">求人一覧</a></li>
-                <li><a href="/article">お問い合せ</a></li>
+{{--                <li><a href="/article">求人一覧</a></li>--}}
+{{--                <li><a href="/article">お問い合せ</a></li>--}}
             </ul>
         </div>
     </div>
