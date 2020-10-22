@@ -186,14 +186,14 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                         <label class="interview-content-label">
-                                            <input type="radio" name="video" class="interview-content-checkbox-input" value="ari">
+                                            <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="ari">
                                             <span></span>
                                             <span>動画つき</span>
                                         </label>
                                     </div>
                                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                         <label class="interview-content-label">
-                                            <input type="radio" name="video" class="interview-content-checkbox-input" value="nashi">
+                                            <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="nashi">
                                             <span></span>
                                             <span>動画なし</span>
                                         </label>

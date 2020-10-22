@@ -34,9 +34,11 @@ class ArticleController
             }
 
             if ($condition == 'video' &&  !empty($val)) {
-                if ($val == 'ari') {
+                if (in_array('ari', $val) && !in_array('nashi', $val)) {
                     $obj = $obj->whereNotNull('file');
-                } elseif ($val == 'nashi') {
+                }
+
+                if (!in_array('ari', $val) && in_array('nashi', $val)) {
                     $obj = $obj->whereNull('file');
                 }
             }
@@ -89,7 +91,7 @@ class ArticleController
             $prefCities[$item['pref_id']][] = array('id' => $item['id'], 'name' => $item['name']);
         }
 
-        $cities = isset($prefCities[$allConditions['pref']]) ? $prefCities[$allConditions['pref']] : array();
+        $cities = isset($allConditions['pref']) && isset($prefCities[$allConditions['pref']]) ? $prefCities[$allConditions['pref']] : array();
 
         $arrCategories = array('入社前・研修','乗務','給料','休日','福利厚生','タクシー機関','会社イベント','グルメ','乗務員資格','その他',);
 

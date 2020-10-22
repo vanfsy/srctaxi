@@ -10,6 +10,7 @@
                         <div class="apply-job-heading-cp">
                             <h1>{{ $company->title }}の求人へ応募する</h1>
                         </div>
+
                         <div class="required-form-cp">
                             <p>必須項目*</p>
                         </div>

@@ -1,244 +1,580 @@
 @media only screen and (max-width: 575px) {
 
     /*------- Common CSS Starts -------*/
-
-    .display-block { display: block; }
+    .display-block {
+        display: block;
+    }
 
     /*------- Common CSS Ends -------*/
-
     /*------- Home Page Starts -------*/
-
     /*------- Desktop Logo and Navigationbar Menu Section Starts -------*/
-
-    .bg-logo-navbar-menu-desktop { display: none; }
+    .bg-logo-navbar-menu-desktop {
+        display: none;
+    }
 
     /*------- Desktop Logo and Navigationbar Menu Section Ends -------*/
-
     /*------- BG Blur Section Starts -------*/
+    .bg-blur {
+        background-color: #000000c7;
+        bottom: 0;
+        display: none;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 11;
+    }
 
-    .bg-blur { background-color: #000000c7; bottom: 0; display: none; height: 100%; left: 0; position: fixed; right: 0; top: 0; width: 100%; z-index: 11; }
-    .bg-blur.active { display: block; }
+    .bg-blur.active {
+        display: block;
+    }
 
     /*------- BG Blur Section Ends -------*/
-
     /*------- Mobile Logo and Burger Menu Section Starts -------*/
+    .bg-logo-burger-menu-home {
+        background-color: #fff;
+        display: block;
+        left: 0;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 
-    .bg-logo-burger-menu-home { background-color: #fff; display: block; left: 0; padding: 10px 15px; position: fixed; top: 0; width: 100%; z-index: 10; }
-    .lang-listing { margin-bottom: 0; }
-    .mobile-logo-home > a { display: inline-block; }
-    .mobile-logo-home > a > img { width: 125px; }
+    .lang-listing {
+        margin-bottom: 0;
+    }
+
+    .mobile-logo-home > a {
+        display: inline-block;
+    }
+
+    .mobile-logo-home > a > img {
+        width: 125px;
+    }
 
     /*------- Burger Menu CSS Starts -------*/
+    .burger-menu {
+        background-color: transparent;
+        cursor: pointer;
+        float: right;
+        height: 25px;
+        position: relative;
+        width: 25px;
+    }
 
-    .burger-menu { background-color: transparent; cursor: pointer; float: right; height: 25px; position: relative; width: 25px; }
-    .burger-menu span { background-color: #2f2a64; height: 2px; left: 50%; position: absolute; top: 50%; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%); transform: translate(-50%,-50%); width: 25px; }
+    .burger-menu span {
+        background-color: #2f2a64;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 25px;
+    }
+
     .burger-menu span:before,
-    .burger-menu span:after { content: ""; background-color: #2f2a64; height: 2px; width: 25px; position: absolute; top: 10px; -webkit-transition: 0.5s linear; -moz-transition: 0.5s linear; -ms-transition: 0.5s linear; -o-transition: 0.5s linear; transition: 0.5s linear; }
-    .burger-menu span:before { top: -10px; }
+    .burger-menu span:after {
+        content: "";
+        background-color: #2f2a64;
+        height: 2px;
+        width: 25px;
+        position: absolute;
+        top: 10px;
+        -webkit-transition: 0.5s linear;
+        -moz-transition: 0.5s linear;
+        -ms-transition: 0.5s linear;
+        -o-transition: 0.5s linear;
+        transition: 0.5s linear;
+    }
+
+    .burger-menu span:before {
+        top: -10px;
+    }
 
     /*------- Burger Menu CSS Ends -------*/
-
     /*------- Mobile Logo and Burger Menu Section Ends -------*/
-
     /*------- Sidebar Menu Section Starts -------*/
+    .fixed-sidebar {
+        background-color: #007a9f;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        transition: 0.3s linear;
+        width: 100%;
+        z-index: 11;
+    }
 
-    .fixed-sidebar { background-color: #007a9f; display: block; height: 100%; left: 0; position: fixed; top: 0; -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -o-transform: translateY(-100%); transform: translateY(-100%); -webkit-transition: 0.5s linear; -moz-transition: 0.5s linear; -ms-transition: 0.5s linear; -o-transition: 0.5s linear; transition: 0.5s linear; width: 100%; z-index: 11; }
-    .fixed-sidebar.active { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
-    .fixed-sidebar-close { background-color: #026280; cursor: pointer; height: 50px; position: absolute; right: 0; top: 0; width: 50px; }
-    .fixed-sidebar-close > i { color: #fff; display: block; font-size: 24px; line-height: 50px; text-align: center; }
-    .mobile-menu-listing { padding: 50px 15px; }
-    .mobile-menu-listing > li { display: block; margin-bottom: 15px; position: relative; }
-    .mobile-menu-listing > li > a { color: #000; display: block; font: 16px/1.42857143 "Poppins-Light"; padding-bottom: 5px; position: relative; text-transform: uppercase; }
-    .mobile-menu-listing > li > a > i { padding-left: 5px; }
-    .mobile-menu-listing > li > a > img { margin: 0 auto; width: 50px; }
+    .fixed-sidebar.active {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .fixed-sidebar-close {
+        background-color: #026280;
+        cursor: pointer;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+    }
+
+    .fixed-sidebar-close > i {
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .mobile-menu-listing {
+        padding: 50px 15px;
+    }
+
+    .mobile-menu-listing > li {
+        display: block;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .mobile-menu-listing > li > a {
+        color: #000;
+        display: block;
+        font: 16px/1.42857143 "Poppins-Light";
+        padding-bottom: 5px;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    .mobile-menu-listing > li > a > i {
+        padding-left: 5px;
+    }
+
+    .mobile-menu-listing > li > a > img {
+        margin: 0 auto;
+        width: 50px;
+    }
+
     .mobile-menu-listing > li > a:hover,
-    .mobile-menu-listing > li.active > a { color: #fff; }
-    .mobile-submenu-listing { background-color: #00a0e6; -webkit-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0,0,0,0); -moz-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0,0,0,0); -ms-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0,0,0,0); -o-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0,0,0,0); box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0,0,0,0); display: none; width: 100%; z-index: 10; }
-    .mobile-submenu-listing > li { display: block; padding: 10px 10px 0 10px; text-align: left; }
-    .mobile-submenu-listing > li:last-child { padding: 10px; }
-    .mobile-submenu-listing > li > a { color: #fff; font: 16px/1.42857143 "hiragino-kaku-gothic-pron-w3"; text-transform: uppercase; }
-    .mobile-submenu-listing > li > a:hover { color: #000; }
+    .mobile-menu-listing > li.active > a {
+        color: #fff;
+    }
+
+    .mobile-submenu-listing {
+        background-color: #00a0e6;
+        -webkit-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        -ms-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        -o-box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #00000014, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        display: none;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .mobile-submenu-listing > li {
+        display: block;
+        padding: 10px 10px 0 10px;
+        text-align: left;
+    }
+
+    .mobile-submenu-listing > li:last-child {
+        padding: 10px;
+    }
+
+    .mobile-submenu-listing > li > a {
+        color: #fff;
+        font: 16px/1.42857143 "hiragino-kaku-gothic-pron-w3";
+        text-transform: uppercase;
+    }
+
+    .mobile-submenu-listing > li > a:hover {
+        color: #000;
+    }
 
     /*------- Sidebar Menu Section Ends -------*/
-
     /*------- Header Banner Section Starts -------*/
+    .bg-header-banner-home {
+        margin-top: 69px;
+    }
 
-    .bg-header-banner-home { margin-top: 69px; }
-    .header-banner-info-home > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .header-banner-info-home > h1 > span { display: inline; }
+    .header-banner-info-home > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .header-banner-info-home > h1 > span {
+        display: inline;
+    }
 
     /*------- Header Banner Section Ends -------*/
-
     /*------- Map and Form Section Starts -------*/
+    .bg-map-form-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-map-form-home { padding: 30px 15px 0; }
-    .box-map-home { display: none; }
-    .box-form-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
-    .box-form-body-home { padding: 15px; }
+    .box-map-home {
+        display: none;
+    }
+
+    .box-form-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .box-form-body-home {
+        padding: 15px;
+    }
 
     /*------- Map and Form Section Ends -------*/
-
     /*------- Recommended Interview Article and Ranking View Section Starts -------*/
-
     .bg-recommend-interview-article-view-home,
-    .bg-ranking-view-home { padding: 30px 15px 0; }
+    .bg-ranking-view-home {
+        padding: 30px 15px 0;
+    }
+
     .box-recommend-interview-article-view-heading-home > h3,
-    .box-ranking-view-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
-    .recommend-articles-list-home { display: none; }
+    .box-ranking-view-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .recommend-articles-list-home {
+        display: none;
+    }
+
     .box-recommend-interview-article-view-body-home,
-    .box-ranking-view-body-home { padding: 15px 15px 0; }
+    .box-ranking-view-body-home {
+        padding: 15px 15px 0;
+    }
+
     .box-inner-recommend-interview-article-view-home,
-    .box-inner-ranking-view-home { margin-bottom: 15px; }
+    .box-inner-ranking-view-home {
+        margin-bottom: 15px;
+    }
 
     /*------- Recommended Interview Article and Ranking View Section Ends -------*/
-
     /*------- New Interview Article and with Video Section Starts -------*/
+    .bg-new-interview-article-video-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-new-interview-article-video-home { padding: 30px 15px 0; }
-    .box-new-interview-article-home { margin-bottom: 15px; }
+    .box-new-interview-article-home {
+        margin-bottom: 15px;
+    }
+
     .box-new-interview-article-heading-home > h3,
-    .box-new-interview-article-video-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
+    .box-new-interview-article-video-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
     .box-new-interview-article-body-home,
-    .box-new-interview-article-video-body-home { padding: 15px; }
+    .box-new-interview-article-video-body-home {
+        padding: 15px;
+    }
+
     .box-new-interview-article-img-home,
     .box-new-interview-article-video-img-home,
     .box-new-interview-article-info-home,
-    .box-new-interview-article-video-info-home { width: 49%; }
+    .box-new-interview-article-video-info-home {
+        width: 49%;
+    }
 
     /*------- New Interview Article and with Video Section Ends -------*/
-
     /*------- Banner Section Starts -------*/
+    .bg-banner-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-banner-home { padding: 30px 15px 0; }
-    .box-banner-home { margin-bottom: 15px; }
+    .box-banner-home {
+        margin-bottom: 15px;
+    }
 
     /*------- Banner Section Ends -------*/
-
     /*------- Footer Menu Section Starts -------*/
+    .bg-footer-menu-home {
+        padding: 15px;
+    }
 
-    .bg-footer-menu-home { padding: 15px; }
-    .footer-menu-listing-home > li { margin-right: 10px; }
+    .footer-menu-listing-home > li {
+        margin-right: 10px;
+    }
 
     /*------- Footer Menu Section Ends -------*/
-
     /*------- Footer and Copyright Section Starts -------*/
+    .bg-footer-home {
+        padding: 15px;
+    }
 
-    .bg-footer-home { padding: 15px; }
-    .footer-logo-home { margin-bottom: 15px; }
-    .footer-logo-home > a > img { width: 150px; }
-    .copyright-info > p { padding: 15px 0; }
+    .footer-logo-home {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo-home > a > img {
+        width: 150px;
+    }
+
+    .copyright-info > p {
+        padding: 15px 0;
+    }
 
     /*------- Footer and Copyright Section Ends -------*/
-
     /*------- Home Page Ends -------*/
-
     /*------- Interview Article List Page Starts -------*/
-
     /*------- Heading and Description Second Starts -------*/
+    .bg-interview-articles-lhd-ialp {
+        margin-top: 70px;
+        padding: 15px 15px 0;
+    }
 
-    .bg-interview-articles-lhd-ialp { margin-top: 70px; padding: 15px 15px 0; }
-    .box-interview-articles-lhd > p:first-child { margin-bottom: 15px; }
-    .box-interview-articles-lhd > p > i { padding: 0 15px; }
-    .box-interview-articles-lhd > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .box-interview-articles-lhd > p:first-child {
+        margin-bottom: 15px;
+    }
+
+    .box-interview-articles-lhd > p > i {
+        padding: 0 15px;
+    }
+
+    .box-interview-articles-lhd > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
 
     /*------- Heading and Description Second Ends -------*/
-
     /*------- Interview Articles Section Starts -------*/
+    .bg-interview-articles-ialp {
+        padding: 15px 15px 0;
+    }
 
-    .bg-interview-articles-ialp { padding: 15px 15px 0; }
-    .box-interview-article-img-info-ialp { margin-bottom: 15px; }
-    .box-interview-article-img-ialp { min-height: 300px; }
+    .box-interview-article-img-info-ialp {
+        margin-bottom: 15px;
+    }
+
+    .box-interview-article-img-ialp {
+        min-height: 300px;
+    }
+
     .box-interview-article-img-ialp,
-    .box-interview-article-info-ialp { width: 100%; }
+    .box-interview-article-info-ialp {
+        width: 100%;
+    }
+
     .release-date-ialp > p,
-    .box-form-ialp { margin-bottom: 15px; }
-    .interview-article-listing-ialp { margin: 0 0 15px; }
+    .box-form-ialp {
+        margin-bottom: 15px;
+    }
+
+    .interview-article-listing-ialp {
+        margin: 0 0 15px;
+    }
+
     .box-recommend-interview-article-ialp,
     .box-new-interview-article-ialp,
     .box-interview-article-video-ialp,
-    .box-banner-ialp { margin-bottom: 15px; }
+    .box-banner-ialp {
+        margin-bottom: 15px;
+    }
 
     /*------- Interview Articles Section Ends -------*/
-
     /*------- Interview Article List Page Ends -------*/
-
     /*------- Interview Article Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
-
-    .bg-interview-article-post-iapp { margin-top: 70px; padding: 15px 15px 0; }
+    .bg-interview-article-post-iapp {
+        margin-top: 70px;
+        padding: 15px 15px 0;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Interview Article Post Section Starts -------*/
+    .bg-interview-article-post-info-iapp {
+        padding: 15px;
+    }
 
-    .bg-interview-article-post-info-iapp { padding: 15px; }
-    .box-interview-article-post-info-iapp { margin-bottom: 15px; padding: 15px 15px 0; }
-    .interview-article-post-heading-info-iapp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .interview-article-post-img-info-iapp > img { margin-bottom: 15px; }
-    .interview-article-post-img-info-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .table-iap-info-iapp { margin-bottom: 15px; }
-    .box-sample-corpo-form-iapp { margin-bottom: 15px; }
-    .sample-corpo-form-iapp { padding: 0 10px 10px 10px; }
-    .sample-corpo-form-heading-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .box-table-contents-info-iapp { margin-bottom: 15px; padding: 15px; }
-    .table-content-heading-iapp > p { margin-bottom: 15px; }
-    .faq-heading-desc-iapp > h2 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; padding-bottom: 10px; }
+    .box-interview-article-post-info-iapp {
+        margin-bottom: 15px;
+        padding: 15px 15px 0;
+    }
+
+    .interview-article-post-heading-info-iapp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .interview-article-post-img-info-iapp > img {
+        margin-bottom: 15px;
+    }
+
+    .interview-article-post-img-info-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .table-iap-info-iapp {
+        margin-bottom: 15px;
+    }
+
+    .box-sample-corpo-form-iapp {
+        margin-bottom: 15px;
+    }
+
+    .sample-corpo-form-iapp {
+        padding: 0 10px 10px 10px;
+    }
+
+    .sample-corpo-form-heading-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .box-table-contents-info-iapp {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .table-content-heading-iapp > p {
+        margin-bottom: 15px;
+    }
+
+    .faq-heading-desc-iapp > h2 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
     .faq-que-ans-iapp {
         margin-bottom: 32px;
     }
+
     .faq-que-ans-iapp > h3,
-    .faq-heading-desc-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .faq-heading-desc-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
     .faq-que-ans-iapp > p,
     .faq-heading-desc-iapp > p,
     .faq-heading-desc-iapp > img,
     .box-faq-image-iapp > img,
     .box-faq-image-desc-iapp > p,
     .box-article-img-info-iapp,
-    .box-interview-article-sc-iapp { margin-bottom: 15px; }
-    .box-sample-corpo-form-two-iapp { margin: 15px 0; }
+    .box-interview-article-sc-iapp {
+        margin-bottom: 15px;
+    }
+
+    .box-sample-corpo-form-two-iapp {
+        margin: 15px 0;
+    }
 
     /*------- Interview Article Post Section Ends -------*/
-
     /*------- Interview Article Page Ends -------*/
-
     /*------- Job Listing Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
+    .bg-job-listing-jlp {
+        margin-top: 70px;
+        padding: 15px 15px 0;
+    }
 
-    .bg-job-listing-jlp { margin-top: 70px; padding: 15px 15px 0; }
-    .page-listing-jlp > p > i { padding: 0 15px; }
-    .bg-job-listing-info-jlp { padding: 15px; }
-    .box-job-listing-info-jlp { margin-bottom: 15px; padding: 15px; }
+    .page-listing-jlp > p > i {
+        padding: 0 15px;
+    }
+
+    .bg-job-listing-info-jlp {
+        padding: 15px;
+    }
+
+    .box-job-listing-info-jlp {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
     .sample-corpo-info > h2,
-    .appeal-point-ihd-jlp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w3"; }
-    .sample-corpo-info > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .appeal-point-ihd-jlp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w3";
+    }
+
+    .sample-corpo-info > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
     .appeal-point-ihd-jlp > img,
-    .appeal-point-ihd-jlp > p:last-child { margin-bottom: 15px; }
-    .application-require-info-jlp > h2 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; }
-    .form-call-listing-jlp { margin: 15px 0 0; }
-    .form-call-listing-jlp > li { display: block; margin-bottom: 15px; }
-    .form-call-listing-jlp > li:last-child { margin-bottom: 0; }
-    .form-call-listing-jlp > li > a { padding: 10px 20px; }
+    .appeal-point-ihd-jlp > p:last-child {
+        margin-bottom: 15px;
+    }
+
+    .application-require-info-jlp > h2 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .form-call-listing-jlp {
+        margin: 15px 0 0;
+    }
+
+    .form-call-listing-jlp > li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .form-call-listing-jlp > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-call-listing-jlp > li > a {
+        padding: 10px 20px;
+    }
+
     .box-interview-article-wsc-jlp,
-    .box-monthly-views-ranking-jlp { margin-bottom: 15px; }
+    .box-monthly-views-ranking-jlp {
+        margin-bottom: 15px;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Job Listing Page Ends -------*/
-
     /*------- Contact Us Page Starts -------*/
-
     /*------- Contact Form Section Starts -------*/
+    .bg-contact-form-cp {
+        margin-top: 70px;
+        padding: 15px;
+    }
 
-    .bg-contact-form-cp { margin-top: 70px; padding: 15px; }
-    .apply-job-heading-cp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .float-none-mobile { float: none !important; }
-    .select-selected-cp { width: 100%; }
-    .ymd-display-cp > p { margin: 10px 0; }
+    .apply-job-heading-cp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .float-none-mobile {
+        float: none !important;
+    }
+
+    .select-selected-cp {
+        width: 100%;
+    }
+
+    .ymd-display-cp > p {
+        margin: 10px 0;
+    }
 
     /*------- Contact Form Section Ends -------*/
-
     /*------- Contact Us Page Ends -------*/
 
 }
@@ -246,193 +582,367 @@
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
     /*------- Common CSS Starts -------*/
-
-    .display-block { display: block; }
+    .display-block {
+        display: block;
+    }
 
     /*------- Common CSS Ends -------*/
-
     /*------- Home Page Starts -------*/
-
     /*------- Desktop Logo and Navigationbar Menu Section Starts -------*/
-
-    .menu-listing-desktop > li { margin-right: 15px; }
+    .menu-listing-desktop > li {
+        margin-right: 15px;
+    }
 
     /*------- Desktop Logo and Navigationbar Menu Section Ends -------*/
-
     /*------- Header Banner Section Starts -------*/
+    .header-banner-info-home > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
 
-    .header-banner-info-home > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .header-banner-info-home > h1 > span { display: inline; }
+    .header-banner-info-home > h1 > span {
+        display: inline;
+    }
 
     /*------- Header Banner Section Ends -------*/
-
     /*------- Map and Form Section Starts -------*/
+    .bg-map-form-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-map-form-home { padding: 30px 15px 0; }
-    .box-map-home { display: none; }
-    .box-form-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
-    .box-form-body-home { padding: 15px; }
+    .box-map-home {
+        display: none;
+    }
+
+    .box-form-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .box-form-body-home {
+        padding: 15px;
+    }
 
     /*------- Map and Form Section Ends -------*/
-
     /*------- Recommended Interview Article and Ranking View Section Starts -------*/
-
     .bg-recommend-interview-article-view-home,
-    .bg-ranking-view-home { padding: 30px 15px 0; }
+    .bg-ranking-view-home {
+        padding: 30px 15px 0;
+    }
+
     .box-recommend-interview-article-view-heading-home > h3,
-    .box-ranking-view-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
-    .recommend-articles-list-home { display: none; }
+    .box-ranking-view-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .recommend-articles-list-home {
+        display: none;
+    }
+
     .box-recommend-interview-article-view-body-home,
-    .box-ranking-view-body-home { padding: 15px 15px 0; }
+    .box-ranking-view-body-home {
+        padding: 15px 15px 0;
+    }
+
     .box-inner-recommend-interview-article-view-home,
-    .box-inner-ranking-view-home { margin-bottom: 15px; }
+    .box-inner-ranking-view-home {
+        margin-bottom: 15px;
+    }
 
     /*------- Recommended Interview Article and Ranking View Section Ends -------*/
-
     /*------- New Interview Article and with Video Section Starts -------*/
+    .bg-new-interview-article-video-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-new-interview-article-video-home { padding: 30px 15px 0; }
-    .box-new-interview-article-home { margin-bottom: 15px; }
+    .box-new-interview-article-home {
+        margin-bottom: 15px;
+    }
+
     .box-new-interview-article-heading-home > h3,
-    .box-new-interview-article-video-heading-home > h3 { font: 20px/27px "hiragino-kaku-gothic-pron-w6"; }
+    .box-new-interview-article-video-heading-home > h3 {
+        font: 20px/27px "hiragino-kaku-gothic-pron-w6";
+    }
+
     .box-new-interview-article-body-home,
-    .box-new-interview-article-video-body-home { padding: 15px; }
+    .box-new-interview-article-video-body-home {
+        padding: 15px;
+    }
+
     .box-new-interview-article-img-home,
     .box-new-interview-article-video-img-home,
     .box-new-interview-article-info-home,
-    .box-new-interview-article-video-info-home { width: 50%; }
+    .box-new-interview-article-video-info-home {
+        width: 50%;
+    }
 
     /*------- New Interview Article and with Video Section Ends -------*/
-
     /*------- Banner Section Starts -------*/
+    .bg-banner-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-banner-home { padding: 30px 15px 0; }
-    .box-banner-home { margin-bottom: 15px; }
+    .box-banner-home {
+        margin-bottom: 15px;
+    }
 
     /*------- Banner Section Ends -------*/
-
     /*------- Footer Menu Section Starts -------*/
+    .bg-footer-menu-home {
+        padding: 15px;
+    }
 
-    .bg-footer-menu-home { padding: 15px; }
-    .footer-menu-listing-home > li { margin-right: 10px; }
+    .footer-menu-listing-home > li {
+        margin-right: 10px;
+    }
 
     /*------- Footer Menu Section Ends -------*/
-
     /*------- Footer and Copyright Section Starts -------*/
+    .bg-footer-home {
+        padding: 15px;
+    }
 
-    .bg-footer-home { padding: 15px; }
-    .footer-logo-home { margin-bottom: 15px; }
-    .footer-logo-home > a > img { width: 150px; }
-    .copyright-info > p { padding: 15px 0; }
+    .footer-logo-home {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo-home > a > img {
+        width: 150px;
+    }
+
+    .copyright-info > p {
+        padding: 15px 0;
+    }
 
     /*------- Footer and Copyright Section Ends -------*/
-
     /*------- Home Page Ends -------*/
-
     /*------- Interview Article List Page Starts -------*/
-
     /*------- Heading and Description Second Starts -------*/
+    .bg-interview-articles-lhd-ialp {
+        padding: 15px 15px 0;
+    }
 
-    .bg-interview-articles-lhd-ialp { padding: 15px 15px 0; }
-    .box-interview-articles-lhd > p:first-child { margin-bottom: 15px; }
-    .box-interview-articles-lhd > p > i { padding: 0 15px; }
-    .box-interview-articles-lhd > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .box-interview-articles-lhd > p:first-child {
+        margin-bottom: 15px;
+    }
+
+    .box-interview-articles-lhd > p > i {
+        padding: 0 15px;
+    }
+
+    .box-interview-articles-lhd > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
 
     /*------- Heading and Description Second Ends -------*/
-
     /*------- Interview Articles Section Starts -------*/
+    .bg-interview-articles-ialp {
+        padding: 15px 15px 0;
+    }
 
-    .bg-interview-articles-ialp { padding: 15px 15px 0; }
-    .box-interview-article-img-info-ialp { margin-bottom: 15px; }
-    .box-interview-article-img-ialp { min-height: 300px; }
+    .box-interview-article-img-info-ialp {
+        margin-bottom: 15px;
+    }
+
+    .box-interview-article-img-ialp {
+        min-height: 300px;
+    }
+
     .box-interview-article-img-ialp,
-    .box-interview-article-info-ialp { width: 100%; }
+    .box-interview-article-info-ialp {
+        width: 100%;
+    }
+
     .release-date-ialp > p,
-    .box-form-ialp { margin-bottom: 15px; }
-    .interview-article-listing-ialp { margin: 0 0 15px; }
+    .box-form-ialp {
+        margin-bottom: 15px;
+    }
+
+    .interview-article-listing-ialp {
+        margin: 0 0 15px;
+    }
+
     .box-recommend-interview-article-ialp,
     .box-new-interview-article-ialp,
     .box-interview-article-video-ialp,
-    .box-banner-ialp { margin-bottom: 15px; }
+    .box-banner-ialp {
+        margin-bottom: 15px;
+    }
 
     /*------- Interview Articles Section Ends -------*/
-
     /*------- Interview Article List Page Ends -------*/
-
     /*------- Interview Article Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
-
-    .bg-interview-article-post-iapp { padding: 15px 15px 0; }
+    .bg-interview-article-post-iapp {
+        padding: 15px 15px 0;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Interview Article Post Section Starts -------*/
+    .bg-interview-article-post-info-iapp {
+        padding: 15px;
+    }
 
-    .bg-interview-article-post-info-iapp { padding: 15px; }
-    .box-interview-article-post-info-iapp { margin-bottom: 15px; padding: 15px 15px 0; }
-    .interview-article-post-heading-info-iapp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .interview-article-post-img-info-iapp > img { margin-bottom: 15px; }
-    .interview-article-post-img-info-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .table-iap-info-iapp { margin-bottom: 15px; }
-    .box-sample-corpo-form-iapp { margin-bottom: 15px; }
-    .sample-corpo-form-iapp { padding: 0 10px 10px 10px; }
-    .sample-corpo-form-heading-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .box-table-contents-info-iapp { margin-bottom: 15px; padding: 15px; }
-    .table-content-heading-iapp > p { margin-bottom: 15px; }
-    .faq-heading-desc-iapp > h2 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; padding-bottom: 10px; }
+    .box-interview-article-post-info-iapp {
+        margin-bottom: 15px;
+        padding: 15px 15px 0;
+    }
+
+    .interview-article-post-heading-info-iapp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .interview-article-post-img-info-iapp > img {
+        margin-bottom: 15px;
+    }
+
+    .interview-article-post-img-info-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .table-iap-info-iapp {
+        margin-bottom: 15px;
+    }
+
+    .box-sample-corpo-form-iapp {
+        margin-bottom: 15px;
+    }
+
+    .sample-corpo-form-iapp {
+        padding: 0 10px 10px 10px;
+    }
+
+    .sample-corpo-form-heading-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .box-table-contents-info-iapp {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .table-content-heading-iapp > p {
+        margin-bottom: 15px;
+    }
+
+    .faq-heading-desc-iapp > h2 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
     .faq-que-ans-iapp > h3,
-    .faq-heading-desc-iapp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .faq-heading-desc-iapp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
     .faq-que-ans-iapp > p,
     .faq-heading-desc-iapp > p,
     .faq-heading-desc-iapp > img,
     .box-faq-image-iapp > img,
     .box-faq-image-desc-iapp > p,
     .box-article-img-info-iapp,
-    .box-interview-article-sc-iapp { margin-bottom: 15px; }
-    .box-sample-corpo-form-two-iapp { margin: 15px 0; }
+    .box-interview-article-sc-iapp {
+        margin-bottom: 15px;
+    }
+
+    .box-sample-corpo-form-two-iapp {
+        margin: 15px 0;
+    }
 
     /*------- Interview Article Post Section Ends -------*/
-
     /*------- Interview Article Page Ends -------*/
-
     /*------- Job Listing Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
+    .bg-job-listing-jlp {
+        padding: 15px 15px 0;
+    }
 
-    .bg-job-listing-jlp { padding: 15px 15px 0; }
-    .page-listing-jlp > p > i { padding: 0 15px; }
-    .bg-job-listing-info-jlp { padding: 15px; }
-    .box-job-listing-info-jlp { margin-bottom: 15px; padding: 15px; }
+    .page-listing-jlp > p > i {
+        padding: 0 15px;
+    }
+
+    .bg-job-listing-info-jlp {
+        padding: 15px;
+    }
+
+    .box-job-listing-info-jlp {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
     .sample-corpo-info > h2,
-    .appeal-point-ihd-jlp > h3 { font: 18px/24px "hiragino-kaku-gothic-pron-w3"; }
-    .sample-corpo-info > h1 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
+    .appeal-point-ihd-jlp > h3 {
+        font: 18px/24px "hiragino-kaku-gothic-pron-w3";
+    }
+
+    .sample-corpo-info > h1 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
     .appeal-point-ihd-jlp > img,
-    .appeal-point-ihd-jlp > p:last-child { margin-bottom: 15px; }
-    .application-require-info-jlp > h2 { font: 24px/36px "hiragino-kaku-gothic-pron-w6"; }
-    .form-call-listing-jlp { margin: 15px 0 0; }
-    .form-call-listing-jlp > li { display: block; margin-bottom: 15px; }
-    .form-call-listing-jlp > li:last-child { margin-bottom: 0; }
-    .form-call-listing-jlp > li > a { padding: 10px 20px; }
+    .appeal-point-ihd-jlp > p:last-child {
+        margin-bottom: 15px;
+    }
+
+    .application-require-info-jlp > h2 {
+        font: 24px/36px "hiragino-kaku-gothic-pron-w6";
+    }
+
+    .form-call-listing-jlp {
+        margin: 15px 0 0;
+    }
+
+    .form-call-listing-jlp > li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .form-call-listing-jlp > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-call-listing-jlp > li > a {
+        padding: 10px 20px;
+    }
+
     .box-interview-article-wsc-jlp,
-    .box-monthly-views-ranking-jlp { margin-bottom: 15px; }
+    .box-monthly-views-ranking-jlp {
+        margin-bottom: 15px;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Job Listing Page Ends -------*/
-
     /*------- Contact Us Page Starts -------*/
-
     /*------- Contact Form Section Starts -------*/
+    .bg-contact-form-cp {
+        margin-top: 70px;
+        padding: 15px;
+    }
 
-    .bg-contact-form-cp { margin-top: 70px; padding: 15px; }
-    .apply-job-heading-cp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; margin-bottom: 15px; }
-    .float-none-mobile { float: none !important; }
-    .select-selected-cp { width: 100%; }
-    .ymd-display-cp > p { margin: 10px 0; }
+    .apply-job-heading-cp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        margin-bottom: 15px;
+    }
+
+    .float-none-mobile {
+        float: none !important;
+    }
+
+    .select-selected-cp {
+        width: 100%;
+    }
+
+    .ymd-display-cp > p {
+        margin: 10px 0;
+    }
 
     /*------- Contact Form Section Ends -------*/
-
     /*------- Contact Us Page Ends -------*/
 
 }
@@ -440,83 +950,111 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
     /*------- Home Page Starts -------*/
-
     /*------- Header Banner Section Starts -------*/
+    .header-banner-info-home > h1 {
+        font: 30px/42px "hiragino-kaku-gothic-pron-w6";
+    }
 
-    .header-banner-info-home > h1 { font: 30px/42px "hiragino-kaku-gothic-pron-w6"; }
-    .header-banner-info-home > h1 > span { display: inline; }
+    .header-banner-info-home > h1 > span {
+        display: inline;
+    }
 
     /*------- Header Banner Section Ends -------*/
-
     /*------- Map and Form Section Starts -------*/
+    .bg-map-form-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-map-form-home { padding: 30px 15px 0; }
-    .box-map-home { display: none; }
+    .box-map-home {
+        display: none;
+    }
 
     /*------- Map and Form Section Ends -------*/
-
     /*------- Recommended Interview Article and Ranking View Section Starts -------*/
-
     .bg-recommend-interview-article-view-home,
-    .bg-ranking-view-home { padding: 30px 15px 0; }
-    .recommend-articles-list-home { display: none; }
+    .bg-ranking-view-home {
+        padding: 30px 15px 0;
+    }
+
+    .recommend-articles-list-home {
+        display: none;
+    }
+
     .box-recommend-interview-article-view-body-home,
-    .box-ranking-view-body-home { padding: 30px; }
+    .box-ranking-view-body-home {
+        padding: 30px;
+    }
 
     /*------- Recommended Interview Article and Ranking View Section Ends -------*/
-
     /*------- New Interview Article and with Video Section Starts -------*/
+    .bg-new-interview-article-video-home {
+        padding: 30px 15px 0;
+    }
 
-    .bg-new-interview-article-video-home { padding: 30px 15px 0; }
     .box-new-interview-article-body-home,
-    .box-new-interview-article-video-body-home { padding: 30px; }
+    .box-new-interview-article-video-body-home {
+        padding: 30px;
+    }
+
     .box-new-interview-article-img-home,
     .box-new-interview-article-video-img-home,
     .box-new-interview-article-info-home,
-    .box-new-interview-article-video-info-home { width: 100%; }
+    .box-new-interview-article-video-info-home {
+        width: 100%;
+    }
+
     .box-new-interview-article-img-home,
-    .box-new-interview-article-video-img-home { min-height: 300px; }
+    .box-new-interview-article-video-img-home {
+        min-height: 300px;
+    }
 
     /*------- New Interview Article and with Video Section Ends -------*/
-
     /*------- Banner Section Starts -------*/
-
-    .bg-banner-home { padding: 30px 15px; }
+    .bg-banner-home {
+        padding: 30px 15px;
+    }
 
     /*------- Banner Section Ends -------*/
-
     /*------- Footer Menu Section Starts -------*/
-
-    .bg-footer-menu-home { padding: 30px 15px; }
+    .bg-footer-menu-home {
+        padding: 30px 15px;
+    }
 
     /*------- Footer Menu Section Ends -------*/
-
     /*------- Footer and Copyright Section Starts -------*/
+    .bg-footer-home {
+        padding: 30px 15px 15px;
+    }
 
-    .bg-footer-home { padding: 30px 15px 15px; }
-    .footer-logo-home > a > img { width: 150px; }
+    .footer-logo-home > a > img {
+        width: 150px;
+    }
 
     /*------- Footer and Copyright Section Ends -------*/
-
     /*------- Home Page Ends -------*/
-
     /*------- Interview Article Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
-
-    .page-listing-iapp > p > i { padding: 0 15px; }
+    .page-listing-iapp > p > i {
+        padding: 0 15px;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Interview Article Post Section Starts -------*/
+    .interview-article-post-heading-info-iapp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+    }
 
-    .interview-article-post-heading-info-iapp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; }
-    .faq-heading-desc-iapp > h2 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; padding-bottom: 10px; }
+    .faq-heading-desc-iapp > h2 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+        padding-bottom: 10px;
+    }
+
     .box-faq-image-iapp > img,
-    .box-interview-article-sc-iapp { margin-bottom: 30px; }
+    .box-interview-article-sc-iapp {
+        margin-bottom: 30px;
+    }
 
     /*------- Interview Article Post Section Ends -------*/
-
     /*------- Interview Article Page Ends -------*/
 
 }
@@ -524,38 +1062,45 @@
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
     /*------- Home Page Starts -------*/
-
     /*------- Header Banner Section Starts -------*/
+    .header-banner-info-home > h1 {
+        font: 30px/42px "hiragino-kaku-gothic-pron-w6";
+    }
 
-    .header-banner-info-home > h1 { font: 30px/42px "hiragino-kaku-gothic-pron-w6"; }
-    .header-banner-info-home > h1 > span { display: inline; }
+    .header-banner-info-home > h1 > span {
+        display: inline;
+    }
 
     /*------- Header Banner Section Ends -------*/
-
     /*------- Map and Form Section Starts -------*/
-
-    .box-map-home { display: none; }
+    .box-map-home {
+        display: none;
+    }
 
     /*------- Map and Form Section Ends -------*/
-
     /*------- Home Page Ends -------*/
-
     /*------- Interview Article Page Starts -------*/
-
     /*------- Page Listing Info Section Starts -------*/
-
-    .page-listing-iapp > p > i { padding: 0 15px; }
+    .page-listing-iapp > p > i {
+        padding: 0 15px;
+    }
 
     /*------- Page Listing Info Section Ends -------*/
-
     /*------- Interview Article Post Section Starts -------*/
+    .interview-article-post-heading-info-iapp > h1 {
+        font: 24px/32px "hiragino-kaku-gothic-pron-w6";
+    }
 
-    .interview-article-post-heading-info-iapp > h1 { font: 24px/32px "hiragino-kaku-gothic-pron-w6"; }
-    .faq-heading-desc-iapp > h2 { font: 22px/30px "hiragino-kaku-gothic-pron-w6"; padding-bottom: 10px; }
-    .box-faq-image-iapp > img { margin-bottom: 30px; }
+    .faq-heading-desc-iapp > h2 {
+        font: 22px/30px "hiragino-kaku-gothic-pron-w6";
+        padding-bottom: 10px;
+    }
+
+    .box-faq-image-iapp > img {
+        margin-bottom: 30px;
+    }
 
     /*------- Interview Article Post Section Ends -------*/
-
     /*------- Interview Article Page Ends -------*/
 
 }

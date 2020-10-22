@@ -111,10 +111,10 @@
                                         <div class="row">
                                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <label class="interview-content-label">
-                                                    @if(isset($allConditions['video']) && $allConditions['video'] == 'ari')
-                                                        <input type="radio" name="video" class="interview-content-checkbox-input" value="ari" checked>
+                                                    @if(isset($allConditions['video']) && in_array('ari', $allConditions['video']))
+                                                        <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="ari" checked>
                                                     @else
-                                                        <input type="radio" name="video" class="interview-content-checkbox-input" value="ari">
+                                                        <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="ari">
                                                     @endif
                                                     <span></span>
                                                     <span>動画つき</span>
@@ -122,10 +122,10 @@
                                             </div>
                                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <label class="interview-content-label">
-                                                    @if(isset($allConditions['video']) && $allConditions['video'] == 'nashi')
-                                                        <input type="radio" name="video" class="interview-content-checkbox-input" value="nashi" checked>
+                                                    @if(isset($allConditions['video']) && in_array('nashi', $allConditions['video']))
+                                                        <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="nashi" checked>
                                                     @else
-                                                        <input type="radio" name="video" class="interview-content-checkbox-input" value="nashi">
+                                                        <input type="checkbox" name="video[]" class="interview-content-checkbox-input" value="nashi">
                                                     @endif
                                                     <span></span>
                                                     <span>動画なし</span>

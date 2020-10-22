@@ -18,11 +18,17 @@
             </div>
         </div>
     </div>
+
     <!-- Page Listing Info Section Ends -->
     <!-- Job Listing Page Section Starts -->
     <div class="container-fluid bg-job-listing-info-jlp">
         <div class="row">
             <div class="container">
+
+                @if (session('success'))
+                    <div class="alert alert-info" role="alert">{{ session('success') }}</div>
+                @endif
+
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
                         <div class="box-job-listing-info-jlp">

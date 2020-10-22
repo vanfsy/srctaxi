@@ -54,7 +54,7 @@ class ApplicationController
             $application->content = $data['content'];
             $application->save();
 
-            return redirect(route('company.show', ['id' => $data['company_id']]));
+            return redirect(route('company.show', ['id' => $data['company_id']]))->withSuccess('ご応募ありがとうございました。');
         }
     }
 }
