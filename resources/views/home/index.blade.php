@@ -117,6 +117,26 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="box-area-home">
+                                        <div class="box-specify-condition-heading-home">
+                                            <i class="fas fa-check"></i>
+                                            <span>役職</span>
+                                        </div>
+                                        <div class="custom-selection">
+                                            <select class="form-control" name="job" id="jobSelect">
+                                                <option value="">全て</option>
+                                                <?php foreach($arrJobs as $job): ?>
+                                                @if(isset($allConditions['job']) && $allConditions['job'] == $job)
+                                                    <option value="{{ $job }}" selected>{{ $job }}</option>
+                                                @else
+                                                    <option value="{{ $job }}">{{ $job }}</option>
+                                                @endif
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div class="box-interview-content-home">
                                         <div class="box-specify-condition-heading-home">
                                             <i class="fas fa-check"></i>

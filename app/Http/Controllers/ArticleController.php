@@ -29,6 +29,10 @@ class ArticleController
                 $obj = $obj->whereIn('company_id', $companies_id);
             }
 
+            if ($condition == 'job' && !empty($val)) {
+                $obj = $obj->where('user_job', $val);
+            }
+
             if ($condition == 'category' && !empty($val)) {
                 $obj = $obj->whereIn('category', $val);
             }
@@ -95,7 +99,9 @@ class ArticleController
 
         $arrCategories = array('入社前・研修','乗務','給料','休日','福利厚生','タクシー機関','会社イベント','グルメ','乗務員資格','その他',);
 
-        return view('article.index')->with(compact('articles', 'pref', 'cities', 'recommendArticles', 'monthArticles', 'newArticles', 'videoArticles', 'prefCities', 'articlesNumber', 'allConditions', 'arrCategories'));
+        $arrJobs = array('タクシー乗務員', 'ハイヤー乗務員', '社長', '採用担当者', '運行管理者');
+
+        return view('article.index')->with(compact('articles', 'pref', 'cities', 'recommendArticles', 'monthArticles', 'newArticles', 'videoArticles', 'prefCities', 'articlesNumber', 'allConditions', 'arrCategories', 'arrJobs'));
 
     }
 
@@ -162,6 +168,10 @@ class ArticleController
             if ($condition == 'city' && !empty($val)) {
                 $companies_id = Company::where('city_id', $val)->pluck('id')->toArray();
                 $obj = $obj->whereIn('company_id', $companies_id);
+            }
+
+            if ($condition == 'job' && !empty($val)) {
+                $obj = $obj->where('user_job', $val);
             }
 
             if ($condition == 'category' && !empty($val)) {

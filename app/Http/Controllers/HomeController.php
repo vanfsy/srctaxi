@@ -30,7 +30,9 @@ class HomeController
 
         $articlesNumber = Article::all()->count();
 
-        return view('home.index')->with(compact('pref', 'recommendArticles', 'monthArticles', 'newArticles', 'videoArticles', 'prefCities', 'articlesNumber'));
+        $arrJobs = array('タクシー乗務員', 'ハイヤー乗務員', '社長', '採用担当者', '運行管理者');
+
+        return view('home.index')->with(compact('pref', 'recommendArticles', 'monthArticles', 'newArticles', 'videoArticles', 'prefCities', 'articlesNumber', 'arrJobs'));
     }
 
 }

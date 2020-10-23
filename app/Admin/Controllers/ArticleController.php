@@ -71,7 +71,12 @@ class ArticleController extends AdminController
 
         $form->text('user_name', trans('admin.user_name'))->rules('required');
         $form->text('user_age', trans('admin.user_age'))->rules('required');
-        $form->text('user_job', trans('admin.user_job'))->rules('required');
+//        $form->text('user_job', trans('admin.user_job'))->rules('required');
+
+        $arrJobs = array('タクシー乗務員' => 'タクシー乗務員', 'ハイヤー乗務員' => 'ハイヤー乗務員', '社長' => '社長', '採用担当者' => '採用担当者', '運行管理者' => '運行管理者');
+        $form->select('user_job', trans('admin.user_job'))
+            ->options($arrJobs)->rules('required');
+
 
         $form->select('company_id', trans('admin.company'))
             ->options(\App\Company::all()->pluck('title','id'))->rules('required');
@@ -107,7 +112,6 @@ class ArticleController extends AdminController
         $show->field('file', trans('admin.file'))->file();
         $show->field('user_name', trans('admin.user_name'));
         $show->field('user_age', trans('admin.user_age'));
-        $show->field('user_job', trans('admin.user_job'));
         $show->field('user_job', trans('admin.user_job'));
 
         $show->field('company', trans('admin.company'))->as(function ($company) {

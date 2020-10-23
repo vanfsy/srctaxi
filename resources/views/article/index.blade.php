@@ -83,13 +83,33 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="box-area-home">
+                                        <div class="box-specify-condition-heading-home">
+                                            <i class="fas fa-check"></i>
+                                            <span>役職</span>
+                                        </div>
+                                        <div class="custom-selection">
+                                            <select class="form-control" name="job" id="jobSelect">
+                                                <option value="">全て</option>
+                                                <?php foreach($arrJobs as $job): ?>
+                                                @if(isset($allConditions['job']) && $allConditions['job'] == $job)
+                                                    <option value="{{ $job }}" selected>{{ $job }}</option>
+                                                @else
+                                                    <option value="{{ $job }}">{{ $job }}</option>
+                                                @endif
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
                                     <div class="box-interview-content-home">
                                         <div class="box-specify-condition-heading-home">
                                             <i class="fas fa-check"></i>
                                             <span>インタビュー内容</span>
                                         </div>
                                         <div class="row">
-
                                             <?php foreach($arrCategories as $cate): ?>
                                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <label class="interview-content-label">
@@ -215,18 +235,18 @@
                                     </div>
                                 </div>
                             </div>
-                        <div class="box-banner-with-info-ialp">
-                            <div class="box-banner-ialp">
-                                <p>バナー</p>
-                            </div>
-                            <div class="box-banner-ialp">
-                                <p>バナー</p>
+                            <div class="box-banner-with-info-ialp">
+                                <div class="box-banner-ialp">
+                                    <p>バナー</p>
+                                </div>
+                                <div class="box-banner-ialp">
+                                    <p>バナー</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Interview Articles Section Ends -->
+        <!-- Interview Articles Section Ends -->
 @endsection

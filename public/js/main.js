@@ -39,6 +39,13 @@ $(document).ready(function() {
         ajaxNumbers();
     });
 
+    $('#citySelect').change(function () {
+        ajaxNumbers();
+    });
+
+    $('#jobSelect').change(function () {
+        ajaxNumbers();
+    });
     // $('#prefSelect2').change(function () {
     //     $('#articleForm').submit();
     // });
