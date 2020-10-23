@@ -15,3 +15,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::resource('article', 'ArticleController', array('names' => 'article'));
 Route::resource('company', 'CompanyController', array('names' => 'company'));
 Route::resource('application', 'ApplicationController', array('names' => 'application'));
+
+Route::post('article/ajaxNumbers', 'ArticleController@ajaxNumbers')->name('article.ajax.numbers');

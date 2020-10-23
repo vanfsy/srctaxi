@@ -148,4 +148,63 @@ class ArticleController
 
         return view('article.show')->with(compact('article', 'company', 'pref', 'city', 'recommendArticles', 'newArticles', 'videoArticles', 'sameCompanyArticles', 'monthArticles', 'prevArticle', 'nextArticle'));
     }
+
+    public function ajaxNumbers(Request $request) {
+        $allConditions = $request->all();
+
+        $obj = Article::with('company')->withCount('allViews')->withCount('monthViews');
+        foreach ($allConditions as $condition => $val) {
+            if ($condition == 'pref' && !empty($val)) {
+                $companies_id = Company::where('pref_id', $val)->pluck('id')->toArray();
+                $obj = $obj->whereIn('company_id', $companies_id);
+            }
+
+            if ($condition == 'city' && !empty($val)) {
+                $companies_id = Company::where('city_id', $val)->pluck('id')->toArray();
+                $obj = $obj->whereIn('company_id', $companies_id);
+            }
+
+            if ($condition == 'category' && !empty($val)) {
+                $obj = $obj->whereIn('category', $val);
+            }
+
+            if ($condition == 'video' &&  !empty($val)) {
+                if (in_array('ari', $val) && !in_array('nashi', $val)) {
+                    $obj = $obj->whereNotNull('file');
+                }
+
+                if (!in_array('ari', $val) && in_array('nashi', $val)) {
+                    $obj = $obj->whereNull('file');
+                }
+            }
+
+            if ($condition == 'keyword' &&  !empty($val)) {
+                $pref_ids = Pref::where('name', 'LIKE', '%'. $val . '%')->pluck('id')->toArray();
+                $city_ids = City::where('name', 'LIKE', '%'. $val . '%')->pluck('id')->toArray();
+
+                $companies_id = Company::where('title', 'LIKE', '%'. $val . '%')->orWhereIn('pref_id', $pref_ids)->orWhereIn('city_id', $city_ids)->pluck('id')->toArray();
+
+                $obj = $obj->where(function ($query) use($val, $companies_id) {
+                    $query->where('title', 'LIKE', '%'. $val . '%')->orWhereIn('company_id', $companies_id);
+                });
+            }
+
+            if ($condition == 'sort') {
+                if ($val == 'recommend') {
+                    $obj = $obj->orderBy('all_views_count', 'desc');
+                } elseif ($val == 'new') {
+                    $obj = $obj->orderBy('created_at', 'desc');
+                } elseif ($val == 'video') {
+                    $obj = $obj->whereNotNull('file')->orderBy('created_at', 'desc');
+                }
+            }
+        }
+
+        $articlesNumber = $obj->count();
+
+        $ret['success'] = 1;
+        $ret['count'] = $articlesNumber;
+        return response()->json($ret);
+
+    }
 }

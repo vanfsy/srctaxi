@@ -35,19 +35,26 @@ $(document).ready(function() {
         }
 
         $('#citySelect').html(html);
+
+        ajaxNumbers();
     });
 
-    $('#prefSelect2').change(function () {
-        $('#articleForm').submit();
-    });
-
-    $('#citySelect2').change(function () {
-        $('#articleForm').submit();
-    });
-
+    // $('#prefSelect2').change(function () {
+    //     $('#articleForm').submit();
+    // });
+    //
+    // $('#citySelect2').change(function () {
+    //     $('#articleForm').submit();
+    // });
+    //
     $('#articleForm .interview-content-checkbox-input').click(function () {
-        $('#articleForm').submit();
+        ajaxNumbers();
     })
+
+    $('#articleForm .form-cotrol-free-word').change(function () {
+        ajaxNumbers();
+    })
+
 
 });
 // Disabled Keyboard Events
@@ -58,3 +65,18 @@ $(document).ready(function() {
 // window.oncontextmenu = function () {
 //   return false;
 // }
+
+function ajaxNumbers() {
+    $form = $('#articleForm');
+    $.ajax({
+        type: 'POST',
+        url: '/article/ajaxNumbers',
+        data: $form.serialize(),
+        success: function (data) {
+            var success = data['success'];
+            if (success) {
+                $('#article_number').text(data['count']);
+            }
+        }
+    });
+}

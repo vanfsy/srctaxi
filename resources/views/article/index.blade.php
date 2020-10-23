@@ -50,6 +50,7 @@
                                 <h3>条件を指定して検索</h3>
                             </div>
                             <form action="/article" method="get" id="articleForm">
+                                @csrf
                                 <div class="box-form-body-home">
                                     <div class="box-area-home">
                                         <div class="box-specify-condition-heading-home">
@@ -57,7 +58,7 @@
                                             <span>エリア</span>
                                         </div>
                                         <div class="custom-selection">
-                                            <select class="form-control" name="pref" id="prefSelect2">
+                                            <select class="form-control" name="pref" id="prefSelect">
                                                 <option value="">全て</option>
                                                 <?php foreach($pref as $key=>$val): ?>
                                                 @if(isset($allConditions['pref']) && $allConditions['pref'] == $key)
@@ -67,9 +68,10 @@
                                                 @endif
                                                 <?php endforeach; ?>
                                             </select>
+                                            <input type="hidden" value="{{ json_encode($prefCities) }}" id="prefCities" />
                                         </div>
                                         <div class="custom-selection">
-                                            <select class="form-control" name="city" id="citySelect2">
+                                            <select class="form-control" name="city" id="citySelect">
                                                 <option value="">全て</option>
                                                 <?php foreach($cities as $key=>$val): ?>
                                                 @if(isset($allConditions['city']) && $allConditions['city'] == $val['id'])
@@ -146,7 +148,7 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="box-hit-home">
-                                                    <p>{{ number_format($articlesNumber) }} <span>件ヒット</span></p>
+                                                    <p><label id="article_number">{{ number_format($articlesNumber) }}</label> <span>件ヒット</span></p>
                                                 </div>
                                             </div>
                                         </div>
