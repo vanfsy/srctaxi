@@ -12,7 +12,7 @@ Route::group([
 ], function (Router $router) {
 
 //    $router->get('/', 'HomeController@index')->name('home');
-    $router->get('/', 'CompanyController@index')->name('home');
+    $router->get('/', 'HomeController@index')->name('home');
     Route::resource('company', 'CompanyController', array('names' => 'admin.company'));
     Route::resource('article', 'ArticleController', array('names' => 'admin.article'));
     Route::resource('application', 'ApplicationController', array('names' => 'admin.application'));

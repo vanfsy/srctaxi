@@ -82,7 +82,9 @@ class ArticleController extends AdminController
             ->options(\App\Company::all()->pluck('title','id'))->rules('required');
 
         $form->text('title1', trans('admin.title1'));
-        $form->textarea('content1', trans('admin.content1'));
+//        $form->textarea('content1', trans('admin.content1'));
+        $form->html('content1', trans('admin.content1'));
+
         $form->text('title2', trans('admin.title2'));
         $form->textarea('content2', trans('admin.content2'));
         $form->text('title3', trans('admin.title3'));
